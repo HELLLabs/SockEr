@@ -1,4 +1,4 @@
-var socket =io.connect("http://localhost:5000");
+var socket =io.connect(document.location["origin"]);
 var output =document.getElementById('output'),
     btn=document.getElementById('send'),
     btn2=document.getElementById('reset'),
@@ -8,7 +8,6 @@ var val=0;
 //event listener
 btn.addEventListener('click',function () {
     val+=1;
-    console.log(val);
     socket.emit('count',val);
 });
 btn2.addEventListener('click',function(){
