@@ -2,7 +2,7 @@ var express=require('express');
 var socket=require('socket.io');
 var app=express();
 
-var server=app.listen(5000,function () {
+var server=app.listen(8000,function () {
   console.log("lisiting to port no 5000");
 });
 app.use(express.static('public'));
@@ -13,7 +13,7 @@ app.get('/view',function (req,res) {
   res.sendfile('view.html');
 });
 
-var io =socket(server);
+var io = socket(server);
 var room=0;
 
 var a=0;
