@@ -1,0 +1,44 @@
+body {
+margin: 0px;
+margin: auto;
+background-color: #FDE7A3;
+}
+
+
+.view {
+	width: 90%;
+	margin: 5%;
+}
+
+.logo {
+	width: 80%;
+	margin: 2em 2em 2em 2em;
+     display: flex;
+	flex-direction: column;
+}
+
+.row {
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+img {
+	width: auto;
+	height: 4em;
+}
+
+.count {
+	background-color: #FDF4CA;
+	border-radius: 10%;
+	display: flex;
+    justify-content: center;
+	width: 90%;
+	margin: 30% 5%;
+	height: auto;
+}
+
+p {
+	font-size: 7em;
+	color: #D90429;
+}

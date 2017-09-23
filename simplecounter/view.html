@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>count</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="/count.css"  rel="stylesheet" >
+  </head>
+  <body>
+    <div>
+       <div class="container-fluid view">
+          <div class="row logo">
+              <div class="col-sm-12">
+               <img src="/img/text-logo.svg" alt="text-logo">
+              </div>
+          </div>
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="count" id="output">
+            <p>0</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <script>
+    var socket =io.connect("http://localhost:5000");
+    var output =document.getElementById('output');
+
+     socket.on('count',function (a) {
+
+       output.innerHTML='<p><strong>'+ a+  '</strong></p>'; });
+    </script>
+  </body>
+</html>
