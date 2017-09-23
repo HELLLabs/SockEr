@@ -13,8 +13,15 @@ body{
     height:20%
     border-radius: 0 0 2px 2px;
     height: 300px;
-font-size: 500%;
+
 }
+
+#send {
+  color:white;
+font-size:5em;
+font-weight:700;
+}
+
 .btn-danger{
 
       font-size: 70px;
@@ -40,10 +47,68 @@ p{
 .img{
   height:57px;
 }
-.logo{
-  height: 20%;
-  width: 20%;
+
+#decrement {
+  border: #FF9F1C solid 4px;
+background-color: #FF9F1C;
+color:white;
+font-size:3em;
+font-weight:700;
+}
+
+#reset {
+  border: #D90429 solid 4px;
+background-color: #D90429;
+color:white;
+font-size:3em;
+font-weight:700;
+}
+
+.logo {
+  width: 80%;
+  margin: 2em 2em 2em 2em;
+     display: flex;
+  flex-direction: column;
+}
+img {
+  width: auto;
+  height: 4em;
+}
+
+
+
+@media only screen and (max-width: 1050px) {
+
+
+.logo {
+  width: 80%;
+     display: flex;
+  flex-direction: column;
+  margin-bottom: 13em;
+}
+
+
+img {
+  width: 90%;
   height: auto;
-  margin: 2em;
+  margin-left: 5%;
+}
+
+.count {
+  background-color: #FDF4CA;
+  border-radius: 10%;
+  display: flex;
+    justify-content: center;
+  width: 40em;
+  margin: auto;
+  height: auto;
+  margin-bottom: 15em;
+}
+
+
+p {
+  font-size: 20em;
+  color: #D90429;
+}
 
 }

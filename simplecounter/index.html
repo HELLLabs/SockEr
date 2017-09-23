@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>chat aapp</title>
-    <link href="/style.css" rel="stylesheet"></link>
+    <link href="public/style.css" rel="stylesheet"></link>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></<script>
 
@@ -23,14 +23,16 @@
           <div class="container view1">
             <div class="row logo">
                 <div class="col-sm-12 text-center">
-                  <img src="/img/text-logo.svg"  alt="helllab-logo">
+                  <img src="public/img/logo.svg"  alt="helllab-logo">
                 </div>
             </div>
           </div>
           <div class="container">
             <div class="row counter">
-              <div class="col-sm-12 text-center " id="output">
+              <div class="col-sm-12 text-center" id="output">
+              <div class="count">
                 <p>0</p>
+               </div> 
               </div>
             </div>
           </div>
@@ -39,13 +41,13 @@
             <div class="panel-body">
               <div class="row">
                 <div class="col-sm-7 text-center">
-                  <button id="send" type="button" class="btn btn-success">Basic</button>
+                  <button id="send" type="button" class="btn btn-success">Count</button>
 
                 </div>
                 <div class="col-sm-5 ">
                   <div class="row">
                     <div class="col-sm-12 text-center">
-                      <button id="decrement" class="btn btn-danger">decrement</button>
+                      <button id="decrement" class="btn btn-danger">Decrement</button>
                     </div>
                   </div>
                     <div class="row">

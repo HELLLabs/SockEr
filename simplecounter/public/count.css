@@ -5,6 +5,7 @@ background-color: #FDE7A3;
 }
 
 
+
 .view {
 	width: 90%;
 	margin: 5%;
@@ -28,17 +29,62 @@ img {
 	height: 4em;
 }
 
+
 .count {
 	background-color: #FDF4CA;
 	border-radius: 10%;
 	display: flex;
     justify-content: center;
 	width: 90%;
-	margin: 30% 5%;
+	margin: 20% 5%;
 	height: auto;
 }
 
-p {
+h1 {
 	font-size: 7em;
 	color: #D90429;
+}
+
+@media only screen and (max-width: 1050px) {
+	.view {
+	width: 90%;
+	margin: 5%;
+}
+
+.logo {
+	width: 80%;
+     display: flex;
+	flex-direction: column;
+	margin-bottom: 20em;
+}
+
+.row {
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+img {
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+}
+
+
+
+.count {
+	background-color: #FDF4CA;
+	border-radius: 10%;
+	display: flex;
+    justify-content: center;
+	width: 40em;
+	margin: auto;
+	height: auto;
+}
+
+h1 {
+	font-size: 20em;
+	color: #D90429;
+}
+
 }
