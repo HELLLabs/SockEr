@@ -4,36 +4,26 @@ var output =document.getElementById('output'),
     btn2=document.getElementById('reset'),
     btn3=document.getElementById('decrement');
 
-var val=0;
 //event listener
 btn.addEventListener('click',function () {
-    val+=1;
-    socket.emit('count',val);
+    console.log('ADD');
+    socket.emit('count',{});
 });
 btn2.addEventListener('click',function(){
-  var reset=0;
-  socket.emit('reset',reset);
+  socket.emit('reset',{});
+  console.log('RESET');
 });
 
 btn3.addEventListener('click',function(){
-  val-=1;
-  socket.emit('decrement',val);
+  console.log('SUBS.');
+  socket.emit('decrement',{});
 });
 
-
-
- socket.on('count',function (a) {
-   val = a;
-   output.innerHTML='<p><strong>'+ val +  '</strong></p>';
+socket.on('value',function (data) {
+   output.innerHTML='<p><strong>'+ data[0] +  '</strong></p>';
 
  });
- socket.on('reset',function (reset) {
-
-   output.innerHTML='<p><strong>'+ reset +  '</strong></p>';
-
+socket.on('newUserValue',function (data) {
+   output.innerHTML='<p><strong>'+ data[0] +  '</strong></p>';
  });
- socket.on('decrement',function (a) {
-   val = a;
-   output.innerHTML='<p><strong>'+ val +  '</strong></p>';
 
- });
