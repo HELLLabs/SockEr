@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Limit</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+</head>
+<body>
+	<div id="feedback"></div>
+	<input type="text" name="limit" id="newLimit">
+	<button onclick="getChange()">Save</button>
+	<a href="/">Home</a>
+	<script>
+		var socket =io.connect(document.location["origin"]);
+		socket.on('newLimit', function (data) {
+			document.getElementById('feedback').innerHTML = `${data[1]}. Now new Limit be the ${data[0]}`;
+		});
+		function getChange() {
+			var newLimit = parseInt(document.getElementById('newLimit').value);
+			if (isNaN(newLimit)) {
+				document.getElementById('feedback').innerHTML = `<p style="color:red">Input is invalid</p>`;
+				console.log('NaN');
+			}
+			else{
+				socket.emit('setLimit',newLimit);
+				console.log('emited');
+
+			}
+		}
+	</script>
+</body>
+</html>
